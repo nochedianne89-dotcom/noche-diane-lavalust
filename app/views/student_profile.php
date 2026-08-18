@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Profile</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #fdf6ec, #eaf7ee);
+            background: radial-gradient(circle at top left, #1c3a2e, #0b1f18 70%);
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -18,93 +18,98 @@
             padding: 20px;
         }
         .card {
-            background: #ffffff;
-            border-radius: 24px;
-            padding: 44px;
+            background: #12271e;
+            border: 1px solid rgba(183, 228, 199, 0.2);
+            border-radius: 20px;
+            padding: 46px;
             max-width: 560px;
             width: 100%;
-            box-shadow: 0 10px 30px rgba(120, 190, 150, 0.18);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.5);
             position: relative;
             overflow: hidden;
         }
         .card::before {
             content: "";
             position: absolute;
-            top: -60px;
-            right: -60px;
-            width: 160px;
-            height: 160px;
-            background: #b7e4c7;
+            top: -70px;
+            right: -70px;
+            width: 180px;
+            height: 180px;
+            background: radial-gradient(circle, rgba(183,228,199,0.15), transparent 70%);
             border-radius: 50%;
-            opacity: 0.5;
         }
         .nav {
             display: flex;
             gap: 10px;
-            margin-bottom: 18px;
+            margin-bottom: 20px;
             position: relative;
             z-index: 1;
         }
         .nav a {
             text-decoration: none;
-            padding: 9px 20px;
+            padding: 9px 22px;
             border-radius: 999px;
-            font-weight: 600;
-            font-size: 14px;
-            color: #4c8064;
-            border: 1.5px solid #b7e4c7;
+            font-weight: 500;
+            font-size: 13.5px;
+            letter-spacing: 0.3px;
+            color: #b7e4c7;
+            border: 1px solid rgba(183, 228, 199, 0.35);
             transition: 0.25s;
         }
         .nav a:hover, .nav a.active {
-            background: #95d5b2;
-            color: #ffffff;
-            border-color: #95d5b2;
+            background: #b7e4c7;
+            color: #0b1f18;
+            border-color: #b7e4c7;
         }
         .badge {
             display: inline-block;
-            background: #ffe8d6;
-            color: #d97a4d;
+            background: rgba(212, 175, 106, 0.15);
+            color: #d4af6a;
             font-weight: 600;
-            font-size: 13px;
+            font-size: 12px;
+            letter-spacing: 0.5px;
             padding: 7px 16px;
             border-radius: 999px;
-            margin-bottom: 22px;
+            margin-bottom: 24px;
+            border: 1px solid rgba(212, 175, 106, 0.3);
             position: relative;
             z-index: 1;
         }
         h1 {
-            color: #3a6351;
-            font-size: 24px;
+            font-family: 'Playfair Display', serif;
+            color: #e8f5e9;
+            font-size: 26px;
+            font-weight: 700;
             margin-bottom: 14px;
             position: relative;
             z-index: 1;
         }
         .description {
-            color: #6b7d73;
-            font-size: 14px;
-            line-height: 1.6;
-            margin-bottom: 20px;
+            color: #8fb5a0;
+            font-size: 13.5px;
+            line-height: 1.7;
+            margin-bottom: 22px;
             position: relative;
             z-index: 1;
         }
         .info-row {
             display: flex;
             justify-content: space-between;
-            padding: 12px 0;
-            border-bottom: 1px solid #eaf2ec;
-            font-size: 14.5px;
+            padding: 13px 0;
+            border-bottom: 1px solid rgba(183, 228, 199, 0.12);
+            font-size: 14px;
             position: relative;
             z-index: 1;
             gap: 16px;
         }
         .info-row:last-child { border-bottom: none; }
         .label {
-            color: #6faf8a;
+            color: #b7e4c7;
             font-weight: 600;
             white-space: nowrap;
         }
         .value {
-            color: #3a4a42;
+            color: #d9ede0;
             text-align: right;
         }
     </style>
