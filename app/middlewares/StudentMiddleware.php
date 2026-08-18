@@ -5,6 +5,11 @@ class StudentMiddleware
 {
     public function handle(Closure $next)
     {
+        if (!isset($_SESSION['student_access']) || $_SESSION['student_access'] !== true) {
+            redirect('student');
+            exit;
+        }
+
         return $next();
     }
 }

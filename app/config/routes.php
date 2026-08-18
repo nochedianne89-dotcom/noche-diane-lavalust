@@ -44,6 +44,10 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
 */
 /** @var object $router **/
 
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
 require_once APP_DIR . 'config/middleware.php';
 
 $router->get('/', 'Welcome::index');
