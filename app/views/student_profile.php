@@ -112,6 +112,47 @@
             color: #d9ede0;
             text-align: right;
         }
+        .social-section {
+            margin-top: 24px;
+            padding-top: 22px;
+            border-top: 1px solid rgba(183, 228, 199, 0.15);
+            position: relative;
+            z-index: 1;
+        }
+        .social-title {
+            color: #b7e4c7;
+            font-size: 12.5px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+        .social-links {
+            display: flex;
+            gap: 12px;
+        }
+        .social-links a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            padding: 9px 16px;
+            border-radius: 999px;
+            border: 1px solid rgba(183, 228, 199, 0.3);
+            color: #d9ede0;
+            font-size: 13px;
+            font-weight: 500;
+            transition: 0.25s;
+        }
+        .social-links a:hover {
+            background: rgba(183, 228, 199, 0.12);
+            border-color: #b7e4c7;
+        }
+        .social-links svg {
+            width: 16px;
+            height: 16px;
+            fill: #b7e4c7;
+        }
     </style>
 </head>
 <body>
@@ -132,7 +173,22 @@
         <div class="info-row"><span class="label">Email</span><span class="value"><?= $email; ?></span></div>
         <div class="info-row"><span class="label">Address</span><span class="value"><?= $address; ?></span></div>
         <div class="info-row"><span class="label">Contact</span><span class="value"><?= $contact; ?></span></div>
+        <div class="info-row"><span class="label">Skills</span><span class="value"><?= $skills; ?></span></div>
         <div class="info-row"><span class="label">Hobbies</span><span class="value"><?= $hobbies; ?></span></div>
+
+        <div class="social-section">
+            <div class="social-title">Connect with me</div>
+            <div class="social-links">
+                <a href="<?= $facebook; ?>" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg>
+                    Facebook
+                </a>
+                <a href="<?= $instagram; ?>" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24"><path d="M12 2c2.7 0 3.1 0 4.1.1 1 0 1.7.2 2.3.4.6.3 1.1.6 1.6 1.1.5.5.8 1 1.1 1.6.2.6.4 1.3.4 2.3.1 1 .1 1.4.1 4.1s0 3.1-.1 4.1c0 1-.2 1.7-.4 2.3-.3.6-.6 1.1-1.1 1.6-.5.5-1 .8-1.6 1.1-.6.2-1.3.4-2.3.4-1 .1-1.4.1-4.1.1s-3.1 0-4.1-.1c-1 0-1.7-.2-2.3-.4-.6-.3-1.1-.6-1.6-1.1-.5-.5-.8-1-1.1-1.6-.2-.6-.4-1.3-.4-2.3C2 15.1 2 14.7 2 12s0-3.1.1-4.1c0-1 .2-1.7.4-2.3.3-.6.6-1.1 1.1-1.6.5-.5 1-.8 1.6-1.1.6-.2 1.3-.4 2.3-.4C8.9 2 9.3 2 12 2zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zm5.2-8.4a1.2 1.2 0 1 1 0-2.4 1.2 1.2 0 0 1 0 2.4z"/></svg>
+                    Instagram
+                </a>
+            </div>
+        </div>
     </div>
 </body>
 </html>
