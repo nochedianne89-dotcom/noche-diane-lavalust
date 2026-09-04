@@ -47,4 +47,4 @@ get_config([
     'middlewares' => [
         'StudentMiddleware' => new StudentMiddleware()
     ]
-]);
+]); 
