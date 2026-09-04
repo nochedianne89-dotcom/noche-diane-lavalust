@@ -269,7 +269,8 @@ class Database {
         );
 
         if (!empty($database_config['ssl_ca']) && file_exists($database_config['ssl_ca'])) {
-            $options[PDO::MYSQL_ATTR_SSL_CA] = $database_config['ssl_ca'];
+             $ssl_ca_constant = defined('Pdo\\Mysql::ATTR_SSL_CA') ? constant('Pdo\\Mysql::ATTR_SSL_CA') : PDO::MYSQL_ATTR_SSL_CA;
+            $options[$ssl_ca_constant] = $database_config['ssl_ca'];
         }
 
         try {
