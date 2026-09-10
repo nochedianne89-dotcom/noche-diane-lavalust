@@ -45,6 +45,9 @@ require_once APP_DIR . 'middlewares/StudentMiddleware.php';
 
 get_config([
     'middlewares' => [
-        'StudentMiddleware' => new StudentMiddleware()
+        'StudentMiddleware' => new StudentMiddleware(),
+        'auth'              => load_class('AuthMiddleware', 'middlewares'),
     ]
-]); 
+]);
+
+
